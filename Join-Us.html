@@ -30,26 +30,29 @@
         <p>Join our Community to enjoy amazing offers round the clock.</p>
     </section>
     <div class="maindiv">
-        <p class="text" boxno="1">
-            First Name:
-        </p>
-        <input type="text1" id="lname" name="lname">
-        <p class="text" boxno="2">
-            Last Name:
-        </p>
-        <input type="text2" id="lname" name="lname">
-        <p class="text" boxno="3">
-            E-Mail ID/Phone Number:
-        </p>
-        <input type="text3" id="lname" name="lname">
-        <p class="text" boxno="4">
-            Password:
-        </p>
-        <input type="password" id="lname" name="lname">
-        <a href="#" class="bn62">
-            Sign Up
-          </a>
+        <form action="action.php">
+            <p class="text" boxno="1">
+                First Name:
+            </p>
+            <input type="text1" id="lname" name="lname" required>
+            <p class="text" boxno="2">
+                Last Name:
+            </p>
+            <input type="text2" id="lname" name="lname" required>
+            <p class="text" boxno="3">
+                E-Mail ID/Phone Number:
+            </p>
+            <input type="text3" id="lname" name="lname" required>
+            <p class="text" boxno="4">
+                Password:
+            </p>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase, lowercase letter and at least 8 or more characters" required>
+            <input type="checkbox" onclick="showPsw()">
+            <input type="submit" value="Sign Up">
+        </form>
     </div>
+
+
     <div class="text-Join1">
         Join
     </div>
@@ -89,5 +92,66 @@
             <a href="#">Help</a>
         </div>
     </footer>
+
+
+    <script>
+        var myInput = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        
+        myInput.onkeyup = function() {
+          // Validate lowercase letters
+          var lowerCaseLetters = /[a-z]/g;
+          if(myInput.value.match(lowerCaseLetters)) {  
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+          } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+          }
+          
+          // Validate capital letters
+          var upperCaseLetters = /[A-Z]/g;
+          if(myInput.value.match(upperCaseLetters)) {  
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+          } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+          }
+        
+          // Validate numbers
+          var numbers = /[0-9]/g;
+          if(myInput.value.match(numbers)) {  
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+          
+          // Validate length
+          if(myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+          } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+          }
+        }
+
+        function showPsw() {
+          var x = document.getElementById("psw");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
+
+
 </body>
 </html>
