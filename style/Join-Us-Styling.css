@@ -170,6 +170,34 @@ input[type=password] {
     border-radius: 4px;
 }
 
+input[type=checkbox] {
+  position: absolute;
+  top: 295px;
+  left: 570px;
+  width: 20px;
+  height: 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #088178;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  font-size: large;
+  font-weight: 600;
+  position: absolute;
+  bottom: 70px;
+  left: 90px;
+
+}
 
 .text-Join1{
     position: absolute;
@@ -184,22 +212,8 @@ input[type=password] {
     font-size: 120px;
     color: #014f16;
 }
-.bn62 {
-    color: white;
-    background-color: #088178;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3em;
-    width: 8em;
-    font-size: large;
-    font-weight: 600;
-    position: absolute;
-    bottom: 70px;
-    left: 90px;
 
-  }
+
   footer{
     display:flex;
     flex-wrap: wrap;
