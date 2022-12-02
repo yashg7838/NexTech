@@ -34,13 +34,15 @@
         <p>Special Discounts upto 50% off</p>
     </section>
 
+    <button onclick="topFunction()" id="myBtnTop" title="Go to top">Back to Top</button>
+
     <section id="product1">
         <div class="pro-container">
             <div class="pro">
                 <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
                 <div class="des">
-                    <span>Nvidia</span>
-                    <h5>GTX 1650 8gb vram</h5>
+                    <span id="company"></span>
+                    <h5 id="product"></h5>
                     <div>
                         <i class="lni lni-star-filled"></i>
                         <i class="lni lni-star-filled"></i>
@@ -168,9 +170,9 @@
     </section>
 
     <section id="pagination" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">Next</a>
+        <a class="active" href="#">1</a>
+        <a href="shop_2.html">2</a>
+        <a href="shop_2.html">Next</a>
     </section>
 
     <footer class="section-p1">
@@ -206,5 +208,30 @@
             <a href="#">Help</a>
         </div>
     </footer>
+
+    <script>
+        const myObj = {comp:"Nvidia", prod:"GTX 1650 8gb vram"};
+        document.getElementById("company").innerHTML = myObj.comp;
+        document.getElementById("product").innerHTML = myObj.prod;                                                                                                          
+        
+
+        let mybutton = document.getElementById("myBtnTop");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 </html>
