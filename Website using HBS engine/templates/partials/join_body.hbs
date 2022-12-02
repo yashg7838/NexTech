@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #page-header{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2{
+    font-size: 50px;
+    position: absolute;
+    top: 135px;
+    left: 670px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: bold;
+}
+
+#page-header p{
+    position: absolute;
+    top: 195px;
+    left: 510px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: bold;
+}
+
+        .maindiv{
+    top: 50px;
+    left: 500px;
+    width: 950px;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+.text{
+    font-weight: bold;
+    font-family: Merriweather;
+    font-size: 25px;
+    position: absolute;
+}
+
+.text[Boxno="1"]{
+    padding-left: 90px;
+    padding-top: 30px;
+}
+
+.text[Boxno="2"]{
+    padding-left: 550px;
+    padding-top: 30px;
+}
+
+.text[Boxno="3"]{
+    padding-left: 90px;
+    padding-top: 130px;
+}
+
+.text[Boxno="4"]{
+    padding-left: 90px;
+    padding-top: 230px;
+}
+
+input[type=text1] {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 350px;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=text2] {
+    position: absolute;
+    top: 90px;
+    left: 550px;
+    width: 350px;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=text3] {
+    position: absolute;
+    top: 190px;
+    left: 90px;
+    width: 450px;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=password] {
+    input-security: none;
+    position: absolute;
+    top: 290px;
+    left: 90px;
+    width: 450px;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  top: 295px;
+  left: 570px;
+  width: 20px;
+  height: 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #088178;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  font-size: large;
+  font-weight: 600;
+  position: absolute;
+  bottom: 70px;
+  left: 90px;
+
+}
+
+.text-Join1{
+    position: absolute;
+    left: 70px;
+    top: 470px;
+    font-size: 120px;
+}
+.text-Join2{
+    position: absolute;
+    left: 70px;
+    top: 570px;
+    font-size: 120px;
+    color: #014f16;
+}
+
+    </style>
+</head>
+<body>
+    <section id="page-header">
+        <h2>Join Us</h2>
+        <p>Join our Community to enjoy amazing offers round the clock.</p>
+    </section>
+    <div class="maindiv">
+        <form action="/join", method="post">
+            <p class="text" boxno="1" name="fname">
+                First Name:
+            </p>
+            <input type="text1" name="lname" required>
+            <p class="text" boxno="2">
+                Last Name:
+            </p>
+            <input type="text2" name="email" required>
+            <p class="text" boxno="3">
+                E-Mail ID/Phone Number:
+            </p>
+            <input type="text3" name="passwd" required>
+            <p class="text" boxno="4">
+                Password:
+            </p>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase, lowercase letter and at least 8 or more characters" required>
+            <input type="checkbox" onclick="showPsw()">
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+
+    <div class="text-Join1">
+        Join
+    </div>
+    <div class="text-Join2">
+        Now
+    </div>
+    <script>
+        var myInput = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        
+        myInput.onkeyup = function() {
+          // Validate lowercase letters
+          var lowerCaseLetters = /[a-z]/g;
+          if(myInput.value.match(lowerCaseLetters)) {  
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+          } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+          }
+          
+          // Validate capital letters
+          var upperCaseLetters = /[A-Z]/g;
+          if(myInput.value.match(upperCaseLetters)) {  
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+          } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+          }
+        
+          // Validate numbers
+          var numbers = /[0-9]/g;
+          if(myInput.value.match(numbers)) {  
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+          
+          // Validate length
+          if(myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+          } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+          }
+        }
+
+        function showPsw() {
+          var x = document.getElementById("psw");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script>
+</body>
+</html>

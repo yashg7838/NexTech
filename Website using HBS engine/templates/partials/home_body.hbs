@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <link href="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'League Spartan', sans-serif;
+        }
+        h1{
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+        h2{
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+        h4{
+            font-size: 20px;
+            color: #222;
+        }
+        h6{
+            font-weight: 700;
+            font-size: 12px;
+        }
+        p{
+            font-size: 16px;
+            color:#465b52;
+            margin: 15px 0 20px 0;
+        }
+        .section-p1{
+            padding: 40px 80px;
+        }
+        .section-m1{
+            margin: 40px 0;
+
+        }
+        body{
+            width: 100%;
+            
+        }
+
+        #hero{
+            
+            height: 90vh;
+            width:100%;
+            background-size:cover;
+            background-position: top 25% right 0;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .hero-img{
+            position: absolute;
+            left: 550px;
+        }
+        #hero h4{
+            padding-bottom: 15px;
+
+        }
+        #hero h1{
+            color:#088178;
+        }
+        .bn62 {
+            color: white;
+            background-color: #088178;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3em;
+            width: 8em;
+            font-size: large;
+            font-weight: 600;
+        }
+
+
+        #product1{
+            text-align: center;
+        }
+        #product1 .pro{
+            width: 23%;
+            min-width:250px;
+            padding:10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor:pointer;
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+        }
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+        }
+        #product1 .pro img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        #product1 .pro .des{
+            text-align: start;
+            padding: 10px 0;
+        }
+        #product1 .pro .des span{
+            color:#606063;
+            font-size: 12px;
+        }
+        #product1 .pro .des h5{
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des i{
+            font-size:12px;
+            color:rgb(243, 181, 25);
+        }
+        #product1 .pro .des h4{
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro .cart{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color: #e8f6ea;
+            font-weight: 500;
+            color: #088178;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+        #product1 .pro-container{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <img class="hero-img" src="img/hero-img.png" alt="x">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>on all products</h1>
+        <p>Save more with coupons & up to 70% off!</p>
+        <a href="#" class="bn62">
+            Shop Now
+          </a>
+    </section>
+    <section id="product1">
+        <h2>Featured Products</h2>
+        <p>Biggest deals on GPUs, Take that scalpers.</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="ssdss">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/714+DsKIF4L._SL1500_.jpg" alt="">
+                <div class="des">
+                    <span>Nvidia</span>
+                    <h5>GTX 1650 8gb vram</h5>
+                    <div>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <h4>Rs 15000</h4>
+
+                </div>
+                <a href="#"><i class="lni lni-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
